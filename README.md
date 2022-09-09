@@ -11,3 +11,10 @@ Vous vous rendez à la racine du projet dans la console puis
 
 - composer install 
 - php bin/console doctrine:database:create
+
+Autres
+
+Générer les SSH keys:
+$ mkdir config/jwt
+$ openssl genrsa -out config/jwt/private.pem -aes256 4096
+$ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
